@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência Tech Solutions</title>
-    <link rel="stylesheet" href="site_ofc.css">
+    <link rel="stylesheet" href="FENIX.css">
+    <link href="https://fonts.cdnfonts.com/css/modern-romance" rel="stylesheet">
 </head>
 <body>
-0
+
     <nav class="topnav" id="topo">
-        <div class="logo">F.E.N.I.X.</div>
+        <div class="logo">TechSolutions</div>
         <button class="menu-toggle" id="btnMenu" aria-expanded="false">☰</button>
         <ul class="menu-links" id="menuLinks">
-            <li><a href="#sobre nós">Sobre nós</a></li>
+            <li><a href="#servicos">Serviços</a></li>
             <li><a href="#depoimentos">Depoimentos</a></li>
-            <li><a href="#Sobre o tema">Contato</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="#localizacao">Onde Estamos</a></li>
         </ul>
@@ -63,13 +63,39 @@
 O grupo não busca, necessariamente, acabar com o vício, mas sim reduzir o número de pessoas presas a esse problema. Sabemos que a superação depende de cada indivíduo, mas a F.E.N.I.X foi criada com o objetivo de apoiar, incentivar e mostrar que é possível superar desafios com acolhimento e motivação.
 Nosso site foi desenvolvido de forma institucional para o curso de Multimídia, pois entendemos que esse é um tema relevante e importante de ser discutido."</p>
                 </article>
+                   <img src="alunos.jpg" alt="Sobre nós">
             </div>
 
-             <div class="imagemsobrenos">
-        <img src="imagem.jpg" alt="Sobre nós">
-    </div>
-        </section>
+       
+    </section>
 
+     </section>
+
+<section id="arquivos" class="secao-pagina">
+            <h2>Quem somos?</h2>
+            <div class=" pdfs">
+                <article class="livros">
+                    <h3>livros</h3>
+                    <br>
+                    <p>compreendendo os vicios</p>
+                </article>
+                   <img src="arquivos/img_pdf2.jpg" alt="Sobre nós">
+            </div>
+
+<a href="arquivos/como superar um vicio.pdf" download class="botao">
+    Baixar PDF
+</a>
+
+<a href="arquivos/manual.pdf" download class="botao">
+    Baixar PDF
+</a>
+
+<a href="arquivos/manual.pdf" download class="botao">
+    Baixar PDF
+</a>
+
+       
+    </section>
 
 
 
@@ -149,6 +175,6 @@ Nosso site foi desenvolvido de forma institucional para o curso de Multimídia, 
 <
 
 
-    <script src="site_ofc.js"></script>
+    <script src="FENIX.js"></script>
 </body>
 </html>
