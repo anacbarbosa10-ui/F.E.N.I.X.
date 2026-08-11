@@ -1,0 +1,142 @@
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentário Dos Clientes </title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#fff;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+    .comentarios{
+        width:800px;
+        background:#91A8D1;
+        padding:50px;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+    h2{
+        text-align:center;
+    }
+    .comentario{
+        background:#f8f8f8;
+        padding:40px;
+        border-radius:10px;
+        min-height:100px;
+        margin:50px 0;
+        font-size:20px;
+    }
+    .botoes{
+        display:flex;
+        justify-content:space-between;
+    }
+    button{
+        padding:12px 15px;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+        color:white;
+        background:#007BFF;
+    }
+    button:hover{
+        background:#0056b3;
+    }
+    textarea{
+        width:100%;
+        height:90px;
+        margin-top:20px;
+        padding:10px;
+        resize:none;
+        border-radius:5px;
+        border:1px solid #ccc;
+        box-sizing:border-box;
+    }
+    .enviar{
+        width:100%;
+        margin-top:20px;
+        background:#0F4C82;
+    }
+    .enviar:hover{
+        background:#0F4C82;
+    }
+</style>
+
+</head>
+<body>
+    <div class="comentarios">
+    <h2>Comentários</h2>
+    
+    <div class="comentario" id="comentario"></div>
+    <div class="botoes">
+        <button onclick="anterior()">⬅ Anterior</button>
+        <button onclick="proximo()">Próximo ➡</button>
+    </div>
+    <textarea id="novoComentario" placeholder="Escreva seu comentário..."></textarea>
+    <button class="enviar" onclick="adicionarComentario()">
+        Enviar Comentário
+    </button>
+
+</div>
+
+<script>
+
+const comentarios = [
+    "Adorei a atenção deles, me senti acolhida.",
+    "Amei o trabalho deles.",
+];
+
+let indice = 0;
+
+function mostrarComentario(){
+    document.getElementById("comentario").innerHTML = comentarios[indice];
+}
+
+function proximo(){
+    indice++;
+
+    if(indice >= comentarios.length){
+        indice = 0;
+    }
+
+    mostrarComentario();
+}
+
+function anterior(){
+    indice--;
+
+    if(indice < 0){
+        indice = comentarios.length - 1;
+    }
+
+    mostrarComentario();
+}
+
+function adicionarComentario(){
+
+    const texto = document.getElementById("novoComentario").value.trim();
+
+    if(texto === ""){
+        alert("Digite um comentário.");
+        return;
+    }
+
+    comentarios.push(texto);
+
+    indice = comentarios.length - 1;
+
+    mostrarComentario();
+
+    document.getElementById("novoComentario").value = "";
+
+    alert("Comentário adicionado com sucesso!");
+}
+
+mostrarComentario();
+
+</script>
+
+</body>
+</html>
