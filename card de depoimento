@@ -1,0 +1,573 @@
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+    --azul:#0f4c82;
+    --card:#78a5c8;
+    --fundo:#f7f9fc;
+    --texto:#263746;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--fundo);
+    color:var(--texto);
+    overflow-x:hidden;
+}
+
+.historias{
+    width:100%;
+    min-height:100vh;
+    padding:70px 20px;
+}
+
+.historias-header{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.historias-header h1{
+    color:var(--azul);
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.historias-header p{
+    color:#687887;
+    font-size:17px;
+}
+
+.carrossel{
+    position:relative;
+    width:100%;
+    max-width:1200px;
+    height:500px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.cards-container{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.card{
+    position:absolute;
+    width:380px;
+    height:420px;
+    padding:40px;
+    border-radius:30px;
+    background:var(--card);
+    color:var(--texto);
+    opacity:0;
+    pointer-events:none;
+    transform:scale(.7);
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.6s cubic-bezier(.25,1,.5,1);
+    overflow:hidden;
+}
+
+.card.left,.card.right{
+    opacity:1;
+    transform:scale(.84);
+    z-index:2;
+    filter:brightness(.94);
+}
+
+.card.left{transform:translateX(-390px) scale(.84)}
+.card.right{transform:translateX(390px) scale(.84)}
+
+.card.active{
+    opacity:1;
+    transform:translateX(0) scale(1);
+    z-index:5;
+    pointer-events:auto;
+    background:var(--azul);
+    color:white;
+    filter:none;
+    box-shadow:0 25px 60px rgba(15,76,130,.3);
+}
+
+.card-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.nome{
+    width:100%;
+    min-height:32px;
+    font-size:23px;
+    font-weight:bold;
+    line-height:1.3;
+    outline:none;
+    border-radius:6px;
+}
+
+.texto{
+    flex:1;
+    margin-top:35px;
+    font-size:19px;
+    line-height:1.8;
+    overflow-y:auto;
+    outline:none;
+    padding:5px 8px 5px 0;
+    border-radius:6px;
+}
+
+.texto::-webkit-scrollbar{width:5px}
+.texto::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.35);
+    border-radius:20px;
+}
+
+[contenteditable]:focus{
+    outline:2px dashed rgba(255,255,255,.65);
+    outline-offset:6px;
+}
+
+.card:not(.active) [contenteditable]:focus{
+    outline-color:rgba(0,0,0,.25);
+}
+
+.excluir-card{
+    width:36px;
+    height:36px;
+    flex-shrink:0;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    opacity:0;
+    transition:.2s;
+}
+
+.card.active .excluir-card{opacity:1}
+
+.excluir-card:hover{
+    background:#e74c3c;
+    transform:scale(1.08);
+}
+
+.nav{
+    position:absolute;
+    top:50%;
+    width:52px;
+    height:52px;
+    border:0;
+    border-radius:50%;
+    background:white;
+    color:var(--azul);
+    font-size:23px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    z-index:20;
+    box-shadow:0 8px 25px rgba(0,0,0,.13);
+    transform:translateY(-50%);
+    transition:.25s;
+}
+
+.nav:hover{
+    background:var(--azul);
+    color:white;
+    transform:translateY(-50%) scale(1.1);
+}
+
+.voltar{left:5px}
+.passar{right:5px}
+
+.status-carrossel{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:12px;
+    color:#7b8995;
+    opacity:0;
+    transition:.3s;
+}
+
+.status-carrossel.mostrar{opacity:1}
+
+.dots{
+    display:flex;
+    justify-content:center;
+    gap:9px;
+    margin-top:25px;
+}
+
+.dot{
+    width:9px;
+    height:9px;
+    border:0;
+    border-radius:50%;
+    background:#ccd5dd;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dot.active{
+    width:28px;
+    border-radius:20px;
+    background:var(--azul);
+}
+
+.acoes{
+    display:flex;
+    justify-content:center;
+    margin-top:35px;
+}
+
+.adicionar{
+    border:0;
+    padding:15px 28px;
+    border-radius:30px;
+    background:var(--azul);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    box-shadow:0 10px 25px rgba(15,76,130,.22);
+    transition:.25s;
+}
+
+.adicionar:hover{
+    background:#0b3c67;
+    transform:translateY(-3px);
+}
+
+.salvamento{
+    text-align:center;
+    margin-top:14px;
+    color:#7b8995;
+    font-size:13px;
+    opacity:0;
+    transition:.3s;
+}
+
+.salvamento.mostrar{opacity:1}
+
+@media(max-width:900px){
+    .card{width:min(390px,75vw)}
+    .card.left{transform:translateX(-48%) scale(.78)}
+    .card.right{transform:translateX(48%) scale(.78)}
+}
+
+@media(max-width:600px){
+    .historias{padding:45px 10px}
+    .historias-header h1{font-size:28px}
+    .historias-header p{font-size:15px}
+    .carrossel{height:460px}
+
+    .card{
+        width:calc(100vw - 70px);
+        max-width:360px;
+        height:400px;
+        padding:30px 28px;
+        border-radius:24px;
+    }
+
+    .card.left,.card.right{opacity:0}
+    .nome{font-size:21px}
+    .texto{font-size:17px;line-height:1.7}
+    .nav{width:44px;height:44px;font-size:20px}
+    .voltar{left:0}
+    .passar{right:0}
+}
+</style>
+</head>
+
+<body>
+
+<section class="historias">
+
+    <div class="historias-header">
+        <h1>Depoimentos</h1>
+        <p>Compartilhe sua história ou experiência.</p>
+    </div>
+
+    <div class="carrossel" id="carrossel">
+        <button class="nav voltar" type="button">❮</button>
+
+        <div class="cards-container" id="cardsContainer"></div>
+
+        <button class="nav passar" type="button">❯</button>
+
+        <div class="status-carrossel" id="statusCarrossel">
+            Edição pausada
+        </div>
+    </div>
+
+    <div class="dots" id="dots"></div>
+
+    <div class="acoes">
+        <button class="adicionar" id="adicionar" type="button">
+            <span>＋</span> Adicionar depoimento
+        </button>
+    </div>
+
+    <div class="salvamento" id="salvamento">
+        Alterações salvas automaticamente.
+    </div>
+
+</section>
+
+<script>
+const STORAGE_KEY="depoimentos_carrossel";
+const TEMPO=7000;
+
+const $=s=>document.querySelector(s);
+const cardsContainer=$("#cardsContainer");
+const dots=$("#dots");
+const carrossel=$("#carrossel");
+const salvamento=$("#salvamento");
+const status=$("#statusCarrossel");
+
+let depoimentos=JSON.parse(localStorage.getItem(STORAGE_KEY))||[
+    {nome:"Nome do autor",texto:"Escreva aqui a história, depoimento ou experiência que você quiser compartilhar."},
+    {nome:"Nome do autor",texto:"Este espaço pode ser utilizado para escrever um segundo depoimento."},
+    {nome:"Nome do autor",texto:"Conte aqui uma história especial ou uma experiência que deseja compartilhar."},
+    {nome:"Nome do autor",texto:"Você pode escrever depoimentos maiores. O conteúdo será organizado dentro do card."},
+    {nome:"Nome do autor",texto:"Adicione quantos depoimentos quiser utilizando o botão abaixo."},
+    {nome:"Nome do autor",texto:"Este é outro espaço para receber uma nova história."}
+];
+
+let current=0,timer=null,editando=false,touchStart=0;
+
+function escapeHTML(text){
+    const div=document.createElement("div");
+    div.textContent=text;
+    return div.innerHTML.replace(/\n/g,"<br>");
+}
+
+function criarCard(d,i){
+    const card=document.createElement("article");
+
+    card.className="card";
+    card.innerHTML=`
+        <div class="card-top">
+            <div class="nome" contenteditable="true" data-field="nome">${escapeHTML(d.nome)}</div>
+            <button class="excluir-card" type="button">✕</button>
+        </div>
+
+        <div class="texto" contenteditable="true" data-field="texto">${escapeHTML(d.texto)}</div>
+    `;
+
+    card.querySelectorAll("[contenteditable]").forEach(campo=>{
+        campo.addEventListener("focus",()=>pausar(true));
+
+        campo.addEventListener("input",()=>{
+            pausar(true);
+            d[campo.dataset.field]=campo.innerText;
+            salvar();
+        });
+
+        campo.addEventListener("blur",()=>{
+            setTimeout(()=>{
+                if(!document.activeElement?.isContentEditable)
+                    pausar(false);
+            },200);
+        });
+    });
+
+    card.querySelector(".excluir-card").onclick=()=>{
+        excluir(i);
+    };
+
+    cardsContainer.appendChild(card);
+}
+
+function renderizar(){
+    cardsContainer.innerHTML="";
+    dots.innerHTML="";
+
+    depoimentos.forEach((d,i)=>{
+        criarCard(d,i);
+
+        const dot=document.createElement("button");
+        dot.className="dot";
+        dot.type="button";
+        dot.setAttribute("aria-label",`Ir para depoimento ${i+1}`);
+        dot.onclick=()=>{
+            current=i;
+            atualizar();
+            iniciar();
+        };
+        dots.appendChild(dot);
+    });
+
+    atualizar();
+}
+
+function atualizar(){
+    const cards=document.querySelectorAll(".card");
+    const bolinhas=document.querySelectorAll(".dot");
+
+    cards.forEach(c=>c.className="card");
+    bolinhas.forEach(d=>d.classList.remove("active"));
+
+    if(!cards.length)return;
+
+    cards[current].classList.add("active");
+    bolinhas[current]?.classList.add("active");
+
+    if(cards.length>1){
+        cards[(current-1+cards.length)%cards.length].classList.add("left");
+        cards[(current+1)%cards.length].classList.add("right");
+    }
+}
+
+function passar(){
+    if(depoimentos.length>1){
+        current=(current+1)%depoimentos.length;
+        atualizar();
+    }
+}
+
+function voltar(){
+    if(depoimentos.length>1){
+        current=(current-1+depoimentos.length)%depoimentos.length;
+        atualizar();
+    }
+}
+
+function pausar(mostrar=false){
+    clearInterval(timer);
+    timer=null;
+    editando=mostrar;
+    status.classList.toggle("mostrar",mostrar);
+}
+
+function iniciar(){
+    if(editando)return;
+
+    clearInterval(timer);
+    timer=setInterval(passar,TEMPO);
+}
+
+function salvar(){
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(depoimentos));
+
+    salvamento.classList.add("mostrar");
+    clearTimeout(salvar.timer);
+
+    salvar.timer=setTimeout(()=>{
+        salvamento.classList.remove("mostrar");
+    },1800);
+}
+
+function adicionar(){
+    pausar(true);
+
+    depoimentos.push({
+        nome:"Nome do autor",
+        texto:"Escreva aqui seu depoimento..."
+    });
+
+    current=depoimentos.length-1;
+    salvar();
+    renderizar();
+
+    setTimeout(()=>{
+        const texto=document.querySelectorAll(".card")[current]?.querySelector(".texto");
+
+        if(texto){
+            texto.focus();
+
+            const range=document.createRange();
+            range.selectNodeContents(texto);
+
+            const selecao=window.getSelection();
+            selecao.removeAllRanges();
+            selecao.addRange(range);
+        }
+    },100);
+}
+
+function excluir(i){
+    if(depoimentos.length===1){
+        alert("É necessário manter pelo menos um depoimento.");
+        return;
+    }
+
+    if(!confirm("Deseja realmente excluir este depoimento?"))return;
+
+    pausar(false);
+    depoimentos.splice(i,1);
+
+    if(current>=depoimentos.length)
+        current=depoimentos.length-1;
+
+    salvar();
+    renderizar();
+    iniciar();
+}
+
+$(".passar").onclick=()=>{
+    editando=false;
+    status.classList.remove("mostrar");
+    passar();
+    iniciar();
+};
+
+$(".voltar").onclick=()=>{
+    editando=false;
+    status.classList.remove("mostrar");
+    voltar();
+    iniciar();
+};
+
+$("#adicionar").onclick=adicionar;
+
+document.addEventListener("keydown",e=>{
+    if(document.activeElement?.isContentEditable)return;
+
+    if(e.key==="ArrowRight"){
+        passar();
+        iniciar();
+    }
+
+    if(e.key==="ArrowLeft"){
+        voltar();
+        iniciar();
+    }
+});
+
+carrossel.addEventListener("touchstart",e=>{
+    if(!editando)touchStart=e.changedTouches[0].screenX;
+},{passive:true});
+
+carrossel.addEventListener("touchend",e=>{
+    if(editando)return;
+
+    const distancia=e.changedTouches[0].screenX-touchStart;
+
+    if(Math.abs(distancia)<50)return;
+
+    distancia<0?passar():voltar();
+    iniciar();
+},{passive:true});
+
+renderizar();
+iniciar();
+</script>
+
+</body>
+</html>
