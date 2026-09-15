@@ -1,0 +1,4501 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f9fa;
+    color: #261d2b;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.topnav {
+
+    height: 110px;
+    width: 100%;
+
+    background: #c9a0dc;
+
+    display: flex;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    padding: 0;
+
+    border-bottom: 1px solid rgba(147,180,215,0.25);
+
+}
+
+
+.logo-container {
+
+    position: absolute;
+    height: auto;
+    left: 10px;
+    top: 50%; 
+    transform: translateY(-50%);
+
+}
+
+
+.logo {
+
+    width: 300px;
+    height: auto;
+    display: block;
+
+}
+
+
+.menu-links {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    list-style: none;
+
+}
+
+
+.menu-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    padding: 9px 17px;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+
+}
+
+
+.menu-links a:hover {
+
+    background: #c9a0dc
+
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    margin-left: auto;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #48204a;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.hero-texto {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    text-align: center;
+
+}
+
+
+.hero-mini {
+
+    display: block;
+
+    color:#c9a0dc;
+
+    font-size: 20px;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(70px, 12vw, 170px);
+
+    line-height: 0.8;
+
+    letter-spacing: -7px;
+
+    font-weight: 900;
+
+    color: white;
+
+}
+
+
+.hero h2 {
+
+    font-size: clamp(50px, 8vw, 110px);
+
+    line-height: 1;
+
+    font-weight: 300;
+
+    letter-spacing: 4px;
+
+    -webkit-text-stroke: 2px #c9a0dc;
+
+    margin-top: 30px;
+}
+
+
+.hero p {
+
+    max-width: 550px;
+
+    margin: 30px auto;
+
+    color: #d4d4d4;
+
+    font-size: 18px;
+
+}
+
+
+.hero-btn {
+
+    display: inline-block;
+
+    background: #702582;
+
+    color: #d5c6dc;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.hero-btn:hover {
+
+    background: #c9a0dc;
+
+    color: white;
+
+}
+
+
+
+
+/* =========================================================
+   DECORAÇÃO HERO
+========================================================= */
+
+.linha-decorativa {
+
+    position: absolute;
+
+    border: 1px solid rgba(147,180,215,0.2);
+
+    transform: rotate(-25deg);
+
+}
+
+
+.linha-1 {
+
+    width: 600px;
+    height: 600px;
+
+    left: -300px;
+    top: -250px;
+
+}
+
+
+.linha-2 {
+
+    width: 700px;
+    height: 700px;
+
+    right: -350px;
+    bottom: -300px;
+
+}
+
+
+.circulo-decorativo {
+
+    position: absolute;
+
+    border: 1px solid rgba(147,180,215,0.15);
+
+    border-radius: 50%;
+
+}
+
+
+.circulo-1 {
+
+    width: 550px;
+    height: 550px;
+
+    left: -280px;
+    top: 40px;
+
+}
+
+
+.circulo-2 {
+
+    width: 500px;
+    height: 500px;
+
+    right: -250px;
+    top: -150px;
+
+}
+
+/* ==================================================
+   DEPOIMENTOS
+================================================== */
+
+.depoimentos {
+    width: 100%;
+    min-height: 650px;
+
+    padding: 80px 20px;
+
+    background: #f8f9fa;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.titulo-depoimentos {
+    margin-bottom: 60px;
+
+    font-size: clamp(35px, 5vw, 65px);
+
+    color: #48204a;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   ÁREA DO CARD
+================================================== */
+
+.depoimento-wrapper {
+    position: relative;
+
+    width: 620px;
+    max-width: 90%;
+
+    min-height: 430px;
+}
+
+
+/* ==================================================
+   FORMAS ROXAS ATRÁS
+================================================== */
+
+.decoracao {
+    position: absolute;
+
+    border: 3px solid #8d4bbb;
+
+    border-radius: 35px;
+
+    pointer-events: none;
+}
+
+
+/* FORMA 1 */
+
+.decoracao-1 {
+    width: 90%;
+    height: 90%;
+
+    top: -20px;
+    left: 25px;
+
+    transform: rotate(-2deg);
+}
+
+
+/* FORMA 2 */
+
+.decoracao-2 {
+    width: 94%;
+    height: 94%;
+
+    top: 15px;
+    left: -15px;
+
+    transform: rotate(2deg);
+}
+
+
+/* FORMA 3 */
+
+.decoracao-3 {
+    width: 88%;
+    height: 92%;
+
+    top: 5px;
+    right: -15px;
+
+    transform: rotate(-1deg);
+}
+
+
+/* ==================================================
+   CARD PRINCIPAL
+================================================== */
+
+.depoimento-card {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    min-height: 430px;
+
+    padding: 45px 70px 45px 100px;
+
+    background: #fff7ff;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 35px rgba(72, 32, 74, 0.15);
+
+    overflow: visible;
+}
+
+
+/* ==================================================
+   BORDA PONTILHADA
+================================================== */
+
+.depoimento-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    border: 1px dashed #c9a0dc;
+
+    border-radius: 22px;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   CONTEÚDO
+================================================== */
+
+.depoimento-conteudo {
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* ==================================================
+   NOME
+================================================== */
+
+.depoimento-conteudo h3 {
+    margin-bottom: 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+    color: #261d2b;
+}
+
+
+/* ==================================================
+   IDADE
+================================================== */
+
+.idade {
+    margin-bottom: 25px;
+
+    font-size: 18px;
+
+    color: #6d6470;
+}
+
+
+/* ==================================================
+   TEXTO
+================================================== */
+
+#depoimento-texto {
+    max-width: 420px;
+
+    margin-bottom: 35px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #3b3340;
+
+    text-align: justify;
+}
+
+
+/* ==================================================
+   ANIMAÇÃO TRIANGULAR
+================================================== */
+
+.depoimento-card.animando {
+    animation:
+        animacaoTriangular 0.6s ease;
+}
+
+
+@keyframes animacaoTriangular {
+
+    0% {
+        clip-path:
+            polygon(
+                0 0,
+                0 0,
+                0 100%
+            );
+    }
+
+    50% {
+        clip-path:
+            polygon(
+                0 0,
+                100% 0,
+                0 100%
+            );
+    }
+
+    100% {
+        clip-path:
+            polygon(
+                0 0,
+                100% 0,
+                100% 100%,
+                0 100%
+            );
+    }
+
+}
+
+
+/* ==================================================
+   BOLINHAS
+================================================== */
+
+.bolinha {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #8d4bbb;
+}
+
+
+.bolinha-1 {
+    top: 65px;
+    right: 55px;
+}
+
+
+.bolinha-2 {
+    bottom: 35px;
+    right: 100px;
+
+    width: 13px;
+    height: 13px;
+
+    background: #c9a0dc;
+}
+
+
+/* ==================================================
+   SETAS
+================================================== */
+
+/* ==================================================
+   SETAS DO DEPOIMENTO
+================================================== */
+
+.depoimento-seta {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 30;
+
+    width: 52px;
+    height: 52px;
+
+    border: 3px solid #8d4bbb;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #8d4bbb;
+
+    font-size: 36px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 8px 20px rgba(72, 32, 74, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* SETA ESQUERDA */
+
+.seta-esquerda {
+    left: -65px;
+}
+
+.seta-direita {
+    right: -65px;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.depoimento-seta:hover {
+
+    background: #8d4bbb;
+
+    color: white;
+
+    transform:
+        translateY(-50%)
+        scale(1.12);
+
+    box-shadow:
+        0 12px 25px rgba(72, 32, 74, 0.28);
+}
+
+
+/* EFEITO AO CLICAR */
+
+.depoimento-seta:active {
+
+    transform:
+        translateY(-50%)
+        scale(0.92);
+
+}
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
+@media (max-width: 700px) {
+
+    .depoimentos {
+        padding: 60px 15px;
+    }
+
+
+    .depoimento-wrapper {
+        width: 100%;
+        max-width: 520px;
+    }
+
+
+    .depoimento-card {
+        min-height: 400px;
+
+        padding: 45px 55px;
+    }
+
+
+    .depoimento-conteudo h3 {
+        font-size: 30px;
+    }
+
+
+    #depoimento-texto {
+        font-size: 15px;
+
+        max-width: 100%;
+    }
+
+    .seta-esquerda {
+        left: -25px;
+    }
+
+    .seta-direita {
+        right: -25px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .depoimentos {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .depoimento-card {
+        min-height: 420px;
+
+        padding: 40px 35px;
+    }
+
+
+    .depoimento-card::before {
+        inset: 10px;
+    }
+
+
+    .depoimento-conteudo h3 {
+        font-size: 28px;
+    }
+
+
+    .idade {
+        font-size: 16px;
+    }
+
+
+    #depoimento-texto {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .depoimento-seta {
+        width: 42px;
+        height: 42px;
+
+        font-size: 28px;
+    }
+
+}
+
+
+/* CARROSSEL */
+
+.carrossel {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    height: 500px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.cards-container {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* CARD */
+
+.card {
+
+    position: absolute;
+
+    width: 380px;
+
+    height: 420px;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background:#c9a0dc;
+
+    color: #48204a;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform: scale(.7);
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+
+    transition: .6s cubic-bezier(.25,1,.5,1);
+
+    overflow: hidden;
+
+}
+
+
+.card.left,
+.card.right {
+
+    opacity: 1;
+
+    transform: scale(.84);
+
+    z-index: 2;
+
+    filter: brightness(.94);
+
+}
+
+
+.card.left {
+
+    transform: translateX(-390px) scale(.84);
+
+}
+
+
+.card.right {
+
+    transform: translateX(390px) scale(.84);
+
+}
+
+
+.card.active {
+
+    opacity: 1;
+
+    transform: translateX(0) scale(1);
+
+    z-index: 5;
+
+    pointer-events: auto;
+
+    background: var(--azul);
+
+    color: white;
+
+    filter: none;
+
+    box-shadow: 0 25px 60px rgba(15,76,130,.3);
+
+}
+
+
+/* TOPO DO CARD */
+
+.card-top {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+
+.nome {
+
+    width: 100%;
+
+    min-height: 32px;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    line-height: 1.3;
+
+    outline: none;
+
+    border-radius: 6px;
+
+}
+
+
+/* TEXTO */
+
+.texto {
+
+    flex: 1;
+
+    margin-top: 35px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    overflow-y: auto;
+
+    outline: none;
+
+    padding: 5px 8px 5px 0;
+
+    border-radius: 6px;
+
+}
+
+
+.texto::-webkit-scrollbar {
+
+    width: 5px;
+
+}
+
+
+.texto::-webkit-scrollbar-thumb {
+
+    background: rgba(255,255,255,.35);
+
+    border-radius: 20px;
+
+}
+
+
+[contenteditable]:focus {
+
+    outline: 2px dashed rgba(255,255,255,.65);
+
+    outline-offset: 6px;
+
+}
+
+
+.card:not(.active) [contenteditable]:focus {
+
+    outline-color: rgba(0,0,0,.25);
+
+}
+
+
+/* EXCLUIR */
+
+.excluir-card {
+
+    width: 36px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.15);
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition: .2s;
+
+}
+
+
+.card.active .excluir-card {
+
+    opacity: 1;
+
+}
+
+
+.excluir-card:hover {
+
+    background: #e74c3c;
+
+    transform: scale(1.08);
+
+}
+
+
+/* SETAS */
+
+.nav {
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 52px;
+
+    height: 52px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: var(--azul);
+
+    font-size: 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.13);
+
+    transform: translateY(-50%);
+
+    transition: .25s;
+
+}
+
+
+.nav:hover {
+
+    background: var(--azul);
+
+    color: white;
+
+    transform: translateY(-50%) scale(1.1);
+
+}
+
+
+.voltar {
+
+    left: 5px;
+
+}
+
+
+.passar {
+
+    right: 5px;
+
+}
+
+
+/* STATUS */
+
+.status-carrossel {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 12px;
+
+    color: #7b8995;
+
+    opacity: 0;
+
+    transition: .3s;
+
+}
+
+
+.status-carrossel.mostrar {
+
+    opacity: 1;
+
+}
+
+
+/* BOLINHAS */
+
+.dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 25px;
+
+}
+
+
+.dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #ccd5dd;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.dot.active {
+
+    width: 28px;
+
+    border-radius: 20px;
+
+    background: var(--azul);
+
+}
+
+
+/* BOTÃO ADICIONAR */
+
+.acoes {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 35px;
+
+}
+
+
+.adicionar {
+
+    border: 0;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    background: var(--azul);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    box-shadow: 0 10px 25px rgba(15,76,130,.22);
+
+    transition: .25s;
+
+}
+
+
+.adicionar:hover {
+
+    background: #0b3c67;
+
+    transform: translateY(-3px);
+
+}
+
+
+.salvamento {
+
+    text-align: center;
+
+    margin-top: 14px;
+
+    color: #7b8995;
+
+    font-size: 13px;
+
+    opacity: 0;
+
+    transition: .3s;
+
+}
+
+
+.salvamento.mostrar {
+
+    opacity: 1;
+
+}
+
+
+/* =========================================================
+   TÍTULOS
+========================================================= */
+
+.titulo-bloco {
+
+    text-align: center;
+
+    margin-bottom: 55px;
+
+}
+
+
+.titulo-bloco span {
+
+    display: block;
+
+    color: var(--azul);
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.titulo-bloco h2 {
+
+    font-size: clamp(38px, 6vw, 70px);
+
+    text-transform: uppercase;
+
+    line-height: .95;
+
+    letter-spacing: -3px;
+
+    color: #48204a;
+
+}
+
+
+.titulo-branco h2 {
+
+    color: #48204a;
+
+}
+
+
+.titulo-branco span {
+
+    color: #c9a0dc;
+
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.sobre {
+
+    position: relative;
+
+    background: white;
+
+    padding: 100px 7% 120px;
+
+}
+
+
+.sobre-conteudo {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+}
+
+
+.sobre-caixa {
+
+    background: #f3f5f7;
+
+    border: 1px solid #ddd;
+
+    border-left: 7px solid #702582;
+
+    padding: 20px;
+
+    box-shadow: 12px 12px 0 #702582 ;
+
+}
+
+
+.sobre-caixa h3 {
+
+    color: #702582;
+
+    font-size: 45px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.sobre-caixa p {
+
+    color: #666;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+}
+
+
+.sobre-imagem {
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.sobre-imagem img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,.25));
+
+}
+      /* ==================================================
+   DEPOIMENTOS
+================================================== */
+
+.depoimentos {
+    width: 100%;
+    min-height: 650px;
+    padding: 80px 20px;
+
+    background: #f8f9fa;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.titulo-depoimentos {
+    margin-bottom: 60px;
+
+    font-size: clamp(35px, 5vw, 65px);
+
+    color: #48204a;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   ÁREA DO CARD
+================================================== */
+
+.depoimento-wrapper {
+    position: relative;
+
+    width: 620px;
+    max-width: 90%;
+
+    min-height: 430px;
+}
+
+
+/* ==================================================
+   FORMAS ROXAS ATRÁS DO CARD
+================================================== */
+
+.decoracao {
+    position: absolute;
+
+    border: 3px solid #8d4bbb;
+
+    border-radius: 35px;
+
+    pointer-events: none;
+}
+
+
+/* FORMA 1 */
+
+.decoracao-1 {
+    width: 90%;
+    height: 90%;
+
+    top: -20px;
+    left: 25px;
+
+    transform: rotate(-2deg);
+}
+
+
+/* FORMA 2 */
+
+.decoracao-2 {
+    width: 94%;
+    height: 94%;
+
+    top: 15px;
+    left: -15px;
+
+    transform: rotate(2deg);
+}
+
+
+/* FORMA 3 */
+
+.decoracao-3 {
+    width: 88%;
+    height: 92%;
+
+    top: 5px;
+    right: -15px;
+
+    transform: rotate(-1deg);
+}
+
+
+/* ==================================================
+   CARD PRINCIPAL
+================================================== */
+
+.depoimento-card {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    min-height: 430px;
+
+    padding: 45px 70px 45px 100px;
+
+    background: #fff7ff;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 35px rgba(72, 32, 74, 0.15);
+
+    overflow: visible;
+}
+
+
+/* ==================================================
+   BORDA PONTILHADA
+================================================== */
+
+.depoimento-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    border: 1px dashed #c9a0dc;
+
+    border-radius: 22px;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   CONTEÚDO
+================================================== */
+
+.depoimento-conteudo {
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* ==================================================
+   NOME
+================================================== */
+
+.depoimento-conteudo h3 {
+    margin-bottom: 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+    color: #261d2b;
+}
+
+
+/* ==================================================
+   IDADE
+================================================== */
+
+.idade {
+    margin-bottom: 25px;
+
+    font-size: 18px;
+
+    color: #6d6470;
+}
+
+
+/* ==================================================
+   TEXTO
+================================================== */
+
+#depoimento-texto {
+    max-width: 420px;
+
+    margin-bottom: 35px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #3b3340;
+
+    text-align: justify;
+}
+
+
+/* ==================================================
+   ANIMAÇÃO
+================================================== */
+
+.depoimento-card.animando {
+    animation: animacaoTriangular 0.6s ease;
+}
+
+@keyframes animacaoTriangular {
+
+    0% {
+        clip-path: polygon(
+            0 0,
+            0 0,
+            0 100%
+        );
+    }
+
+    50% {
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            0 100%
+        );
+    }
+
+    100% {
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
+    }
+}
+
+
+/* ==================================================
+   BOLINHAS
+================================================== */
+
+.bolinha {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #8d4bbb;
+}
+
+
+/* BOLINHA DE CIMA */
+
+.bolinha-1 {
+    top: 65px;
+    right: 55px;
+}
+
+
+/* BOLINHA DE BAIXO */
+
+.bolinha-2 {
+    bottom: 35px;
+    right: 100px;
+
+    width: 13px;
+    height: 13px;
+
+    background: #c9a0dc;
+}
+
+
+/* ==================================================
+   SETAS
+================================================== */
+
+.depoimento-seta {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 30;
+
+    width: 52px;
+    height: 52px;
+
+    border: 3px solid #8d4bbb;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #8d4bbb;
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 8px 20px rgba(72, 32, 74, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* ==================================================
+   SETA ESQUERDA
+================================================== */
+
+.seta-esquerda {
+    left: -85px;
+}
+
+
+/* ==================================================
+   SETA DIREITA
+================================================== */
+
+.seta-direita {
+    right: -85px;
+}
+
+
+/* ==================================================
+   QUANDO PASSAR O MOUSE
+================================================== */
+
+.depoimento-seta:hover {
+
+    background: #8d4bbb;
+
+    color: white;
+
+    transform:
+        translateY(-50%)
+        scale(1.12);
+
+    box-shadow:
+        0 12px 25px rgba(72, 32, 74, 0.28);
+}
+
+
+/* ==================================================
+   QUANDO CLICAR
+================================================== */
+
+.depoimento-seta:active {
+
+    transform:
+        translateY(-50%)
+        scale(0.92);
+}
+
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
+@media (max-width: 700px) {
+
+    .depoimentos {
+        padding: 60px 15px;
+    }
+
+
+    .depoimento-wrapper {
+        width: 100%;
+        max-width: 520px;
+    }
+
+
+    .depoimento-card {
+        min-height: 400px;
+
+        padding: 45px 55px;
+    }
+
+
+    .depoimento-conteudo h3 {
+        font-size: 30px;
+    }
+
+
+    #depoimento-texto {
+        font-size: 15px;
+
+        max-width: 100%;
+    }
+
+
+    /* SETAS NO CELULAR */
+
+    .seta-esquerda {
+        left: -25px;
+    }
+
+    .seta-direita {
+        right: -25px;
+    }
+}
+
+
+/* ==================================================
+   CELULARES PEQUENOS
+================================================== */
+
+@media (max-width: 450px) {
+
+    .depoimentos {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .depoimento-card {
+        min-height: 420px;
+
+        padding: 40px 35px;
+    }
+
+
+    .depoimento-card::before {
+        inset: 10px;
+    }
+
+
+    .depoimento-conteudo h3 {
+        font-size: 28px;
+    }
+
+
+    .idade {
+        font-size: 16px;
+    }
+
+
+    #depoimento-texto {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .depoimento-seta {
+        width: 42px;
+        height: 42px;
+
+        font-size: 28px;
+    }
+}
+
+
+/* =========================================================
+   FAIXA
+========================================================= */
+
+.faixa {
+
+    width: 110%;
+
+    margin-left: -5%;
+
+    height: 75px;
+
+    background: #c9a0dc;
+
+    transform: rotate(-3deg);
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 0 #702582;
+
+}
+
+
+.faixa-conteudo {
+
+    width: max-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    color: #17191c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    animation: passar 20s linear infinite;
+
+}
+
+
+@keyframes passar {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   PROJETOS
+========================================================= */
+
+
+.projetos {
+    position: relative;
+
+    background: 48204a;
+
+    padding: 120px 7% 100px;
+
+    color: #48204a;
+
+    overflow: hidden;
+}
+
+
+/* SUBTÍTULO */
+
+.subtitulo-projetos {
+    text-align: center;
+
+    color: #702582;
+
+    margin-top: -20px;
+
+    margin-bottom: 45px;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ÁREA DO CARROSSEL
+========================================================= */
+
+.livros-carousel {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    height: 590px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   CONTAINER DOS CARDS
+========================================================= */
+
+.livros-container {
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.livro-card {
+
+    position: absolute;
+
+    width: 850px;
+
+    height: 500px;
+
+    background: #ffffff;
+
+    color: #c9a0dc;
+
+    border-radius: 28px;
+
+    padding: 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    opacity: 0;
+
+    transform:
+        translateX(0)
+        scale(.7);
+
+    transition:
+        all .6s cubic-bezier(.25, 1, .5, 1);
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+}
+
+
+/* =========================================================
+   TÍTULO DO LIVRO
+========================================================= */
+
+.livro-card h3 {
+
+    margin: 0 0 25px;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    color: #333;
+
+}
+
+
+/* =========================================================
+   LIVRO À ESQUERDA
+========================================================= */
+
+.livro-card.livro-left {
+
+    opacity: .45;
+
+    transform:
+        translateX(-390px)
+        scale(.85);
+
+    z-index: 2;
+
+    filter: grayscale(.5);
+
+}
+
+
+/* =========================================================
+   LIVRO À DIREITA
+========================================================= */
+
+.livro-card.livro-right {
+
+    opacity: .45;
+
+    transform:
+        translateX(390px)
+        scale(.85);
+
+    z-index: 2;
+
+    filter: grayscale(.5);
+
+}
+
+
+/* =========================================================
+   LIVRO CENTRAL
+========================================================= */
+
+.livro-card.livro-active {
+
+    opacity: 1;
+
+    transform:
+        translateX(0)
+        scale(1);
+
+    z-index: 10;
+
+    pointer-events: auto;
+
+    filter: none;
+
+    background: #c9a0dc;
+
+    color: white;
+
+    box-shadow:
+        #d5c6dc;
+
+}
+
+
+/* TÍTULO DO CARD CENTRAL */
+
+.livro-card.livro-active h3 {
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   IMAGEM + INFORMAÇÕES
+========================================================= */
+
+.livro-conteudo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    flex: 1;
+
+    min-height: 0;
+}
+
+
+/* =========================================================
+   IMAGEM DO LIVRO
+========================================================= */
+
+.livro-conteudo img {
+
+    width: 250px;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.18);
+
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.livro-informacoes {
+
+    flex: 1;
+
+    height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+/* TEXTO */
+
+.livro-informacoes p {
+
+    margin: 0;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+
+    color: #444;
+
+}
+
+
+/* TEXTO DO CARD ATIVO */
+
+.livro-card.livro-active
+.livro-informacoes p {
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   BOTÃO LEIA AQUI
+========================================================= */
+
+.livro-leia {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 11px 22px;
+
+    background: white;
+
+    color: #48204a;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+}
+
+
+.livro-leia:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* =========================================================
+   SETAS DO CARROSSEL
+========================================================= */
+/* =========================================
+   SETAS DOS LIVROS
+========================================= */
+
+.livro-prev,
+.livro-next {
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 45px;
+    height: 45px;
+
+    transform: translateY(-50%);
+
+    border: none;
+    border-radius: 50%;
+
+    background: #815c97;
+    color: white;
+
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 50;
+
+}
+
+
+/* SETA ESQUERDA */
+
+.livro-prev {
+    left: 10%;
+}
+
+
+/* SETA DIREITA */
+
+.livro-next {
+    right: 10%;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.livro-prev:hover,
+.livro-next:hover {
+
+    transform: translateY(-50%) scale(1.08);
+
+}
+
+/* =========================================================
+   BOLINHAS
+========================================================= */
+
+.livros-dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+}
+
+
+.livro-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #815c97;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.livro-dot.active {
+
+    width: 26px;
+
+    border-radius: 12px;
+
+    background: #815c97;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .livro-card {
+
+        width: 720px;
+
+    }
+
+
+    .livro-card.livro-left {
+
+        transform:
+            translateX(-300px)
+            scale(.82);
+
+    }
+
+
+    .livro-card.livro-right {
+
+        transform:
+            translateX(300px)
+            scale(.82);
+
+            }
+
+
+    .livro-conteudo {
+
+        gap: 30px;
+
+    }
+
+
+    .livro-conteudo img {
+
+        width: 220px;
+
+        height: 320px;
+
+    }
+
+
+    .livro-informacoes {
+
+        height: 320px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .projetos {
+
+        padding:
+            90px 20px 80px;
+
+    }
+
+
+    .subtitulo-projetos {
+
+        font-size: 14px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .livros-carousel {
+
+        height: 700px;
+
+    }
+
+
+    .livro-card {
+
+        width: calc(100% - 50px);
+
+        height: 620px;
+
+        padding: 25px;
+
+        border-radius: 22px;
+
+    }
+
+
+    /* ESCONDE OS CARDS LATERAIS */
+
+    .livro-card.livro-left,
+    .livro-card.livro-right {
+
+        opacity: 0;
+
+        pointer-events: none;
+
+    }
+
+
+    .livro-card.livro-active {
+
+        transform:
+            translateX(0)
+            scale(1);
+
+    }
+
+
+    /* LIVRO + TEXTO UM EMBAIXO DO OUTRO */
+
+    .livro-conteudo {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: center;
+
+    }
+
+
+    .livro-conteudo img {
+
+        width: 170px;
+
+        height: 235px;
+
+    }
+
+
+    .livro-informacoes {
+
+        width: 100%;
+
+        height: auto;
+
+        flex: 1;
+
+        gap: 15px;
+
+    }
+
+
+    .livro-informacoes p {
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+    }
+
+
+    /* SETAS */
+
+    .livro-prev {
+
+        left: 0;
+
+    }
+
+
+    .livro-next {
+
+        right: 0;
+
+    }
+
+
+    .livro-nav {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 17px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .livro-card {
+
+        width: calc(100% - 40px);
+
+        height: 650px;
+
+        padding: 20px;
+
+    }
+
+
+    .livro-card h3 {
+
+        font-size: 20px;
+
+    }
+
+
+    .livro-conteudo img {
+
+        width: 150px;
+
+        height: 210px;
+
+    }
+
+
+    .livro-informacoes p {
+
+        font-size: 12px;
+
+    }
+
+}
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.contato {
+
+    background: #f3f5f7;
+
+    padding: 120px 7%;
+
+}
+
+
+.contato-container {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.contato-texto h3 {
+
+    color: var(--azul);
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+}
+
+
+.contato-texto p {
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+    
+
+}
+
+
+.contato-texto strong {
+
+    color: var(--azul-escuro);
+
+}
+
+
+.container-formulario {
+
+    background: white;
+
+    padding: 35px;
+
+    border: 1px solid #ddd;
+
+    box-shadow: 12px 12px 0 var(--azul-claro);
+
+}
+
+
+.form-cta {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+.grupo-campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.grupo-campo label {
+
+    color: var(--azul-escuro);
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.grupo-campo input {
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    outline: none;
+
+    font-size: 20px;
+
+}
+
+
+.grupo-campo input:focus {
+
+    border-color: var(--azul);
+
+}
+
+
+.btn-enviar {
+
+    grid-column: 1 / -1;
+
+    border: none;
+
+    padding: 14px;
+
+    background: #c9a0dc;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-enviar:hover {
+
+    background: var(--azul-escuro);
+
+}
+
+
+.feedback-sucesso {
+
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background: #d4edda;
+
+    color: #155724;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   COMENTÁRIOS
+========================================================= */
+
+.comentarios {
+
+    background: white;
+
+    padding: 120px 7%;
+
+}
+
+
+.comentarios-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    background: #c9a0dc;
+
+    padding: 45px;
+
+    box-shadow: #7a5c8f;
+
+
+}
+
+
+.comentario-topo {
+
+    color: black;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 20px;
+
+}
+
+
+.comentario {
+
+    min-height: 150px;
+
+    background: white;
+
+    color: var(--azul-escuro);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    font-size: 21px;
+
+}
+
+
+.botoes-comentario {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+}
+
+
+.botoes-comentario button {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 1px solid #815c97;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+}
+
+
+.botoes-comentario button:hover {
+
+    background: var(--azul-claro);
+
+    color: #48204a;
+
+}
+
+
+#novoComentario {
+
+    width: 100%;
+
+    height: 90px;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: none;
+
+    resize: none;
+
+    font-family: Arial;
+
+}
+
+
+.btn-enviar-comentario {
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 13px;
+
+    border: none;
+
+    background: #815c97;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.rodape {
+
+    background: #48204a;
+
+    color: white;
+
+    padding: 100px 7% 30px;
+
+    border-top: 5px solid var(--azul);
+
+}
+
+
+.footer-marca {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    margin-bottom: 80px;
+
+}
+
+
+.footer-marca span {
+
+    color: var(--azul-claro);
+
+    letter-spacing: 6px;
+
+    font-size: 13px;
+
+}
+
+
+.footer-marca h2 {
+
+    font-size: clamp(50px,8vw,100px);
+
+    line-height: .85;
+
+    margin-top: 15px;
+
+}
+
+
+.footer-marca p {
+
+    color: var(--azul-claro);
+
+    font-size: 30px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.rodape-conteudo {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 70px;
+
+}
+
+
+.rodape-contato > span,
+.rodape-localizacao > span {
+
+    color: var(--azul-claro);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.rodape-contato h3,
+.rodape-localizacao h3 {
+
+    font-size: 30px;
+
+    margin: 15px 0 25px;
+
+}
+
+
+.rodape-contato p {
+
+    color: #ccc;
+
+    font-size: 14px;
+
+    margin-bottom: 14px;
+
+    line-height: 1.5;
+
+ a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  a:active {
+    color: #0000ff;
+  }
+
+
+}
+
+
+.mapa-container {
+
+    width: 100%;
+
+    height: 300px;
+
+    border: 1px solid var(--azul);
+
+}
+
+
+.mapa-container iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+
+}
+
+
+.btn-localizacao {
+
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    background: var(--azul);
+
+    border: none;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+.resultado-gps {
+
+    margin-top: 10px;
+
+    color: var(--azul-claro);
+
+    font-size: 12px;
+
+}
+
+
+.rodape-info {
+
+    max-width: 1100px;
+
+    margin: 70px auto 0;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    text-align: center;
+
+    color: #888;
+
+    font-size: 12px;
+
+}
+
+
+.rodape-info strong {
+
+    color: var(--azul-claro);
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR
+========================================================= */
+
+.btn-voltar-topo {
+    width: 45px;
+    height: 15px;
+
+    position: fixed;
+    right: 5px;
+    bottom: 30px;
+
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    padding: 0;
+    cursor: pointer;
+
+    z-index: 1000;
+}
+
+
+/* DESENHO DA SETA */
+
+.btn-voltar-topo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 28px;
+    height: 45px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: #82458F;
+
+    clip-path: polygon(
+        50% 0%,
+        100% 35%,
+        77% 35%,
+        64% 61%,
+        82% 78%,
+        64% 100%,
+        55% 81%,
+        38% 64%,
+        23% 47%,
+        31% 32%,
+        0% 35%
+    );
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .card {
+
+        width: min(390px,75vw);
+
+    }
+
+    .card.left {
+
+        transform: translateX(-48%) scale(.78);
+
+    }
+
+    .card.right {
+
+        transform: translateX(48%) scale(.78);
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    /* MENU */
+
+    .topnav {
+
+        height: 70px;
+
+        padding: 0 20px;
+
+    }
+
+
+    .logo {
+
+        width: 80px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .menu-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #17191c;
+
+        flex-direction: column;
+
+        padding: 15px 0;
+
+    }
+
+
+    .menu-links.ativo {
+
+        display: flex;
+
+    }
+
+
+    .menu-links li {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .menu-links a {
+
+        display: block;
+
+        width: 100%;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 70px;
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 48px;
+
+        -webkit-text-stroke: 1px var(--azul-claro);
+
+    }
+
+
+    .hero-imagem {
+
+        width: 300px;
+
+        height: 390px;
+
+        bottom: -40px;
+
+    }
+
+
+    .hero-texto {
+
+        padding-bottom: 200px;
+
+    }
+
+
+    /* DEPOIMENTOS */
+
+   /* =========================================================
+   NOVOS DEPOIMENTOS F.E.N.I.X
+========================================================= */
+
+.depoimentos {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    background: #f4f5f7;
+    padding: 90px 0 70px;
+    color: #111827;
+}
+
+.depoimentos .titulo {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--azul-escuro);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.depoimentos .subtitulo {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+
+/* CARROSSEL */
+
+.depoimentos .carrossel {
+    width: 96%;
+    max-width: 900px;
+    height: auto;
+    min-height: 300px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+
+    display: block;
+}
+
+
+/* SLIDES */
+
+.depoimentos .slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* CARD */
+
+.depoimentos .depoimento-card {
+    min-width: 100%;
+    min-height: 300px;
+
+    background: white;
+    border-radius: 20px;
+
+    padding: 35px 70px;
+
+    text-align: left;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+    flex-shrink: 0;
+}
+
+
+/* PERFIL */
+
+.depoimentos .perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.depoimentos .avatar {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: var(--azul);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+.depoimentos .nome {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #111827;
+}
+
+.depoimentos .data {
+    font-size: 13px;
+    color: #8b8b8b;
+}
+
+
+/* ESTRELAS */
+
+.depoimentos .estrelas {
+    margin-top: 25px;
+    color: #ffb000;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+/* TEXTO */
+
+.depoimentos .texto {
+    margin-top: 20px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #374151;
+}
+
+
+/* SETAS */
+
+.depoimentos .seta {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--azul);
+    color: white;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.depoimentos .seta:hover {
+    background: #0b3c67;
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+}
+
+.depoimentos .seta-esquerda {
+    left: 16px;
+}
+
+.depoimentos .seta-direita {
+    right: 16px;
+}
+
+
+/* INDICADORES */
+
+.depoimentos .indicadores {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.depoimentos .indicador {
+    width: 11px;
+    height: 11px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #d0d0d0;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.depoimentos .indicador.ativo {
+    width: 25px;
+
+    border-radius: 10px;
+
+    background: var(--azul);
+}
+
+
+    /* FAIXA */
+
+    .faixa {
+
+        height: 60px;
+
+    }
+
+
+    /* PROJETOS */
+
+    .projetos {
+
+        padding: 100px 25px;
+
+    }
+
+
+    .livros-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* CONTATO */
+
+    .contato {
+
+        padding: 90px 25px;
+
+    }
+
+
+    .contato-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .form-cta {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .btn-enviar {
+
+        grid-column: auto;
+
+    }
+
+
+    /* COMENTÁRIOS */
+
+    .comentarios {
+
+        padding: 90px 25px;
+
+    }
+
+
+    .comentarios-container {
+
+        padding: 25px;
+
+        box-shadow: 8px 8px 0 var(--azul-claro);
+
+    }
+
+
+    /* FOOTER */
+
+    .rodape {
+
+        padding: 80px 25px 25px;
+
+    }
+
+
+    .footer-marca {
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .footer-marca h2 {
+
+        font-size: 55px;
+
+    }
+
+
+    .rodape-conteudo {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .historias {
+
+        padding: 45px 10px;
+
+    }
+
+
+    .historias-header h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .historias-header p {
+
+        font-size: 15px;
+
+    }
+
+
+    .carrossel {
+
+        height: 460px;
+
+    }
+
+}
+/* =========================================================
+   DEPOIMENTOS - CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .depoimentos {
+        padding: 70px 10px 60px;
+    }
+
+    .depoimentos .titulo {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    .depoimentos .subtitulo {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .depoimentos .carrossel {
+        width: 100%;
+        min-height: 360px;
+    }
+
+    .depoimentos .depoimento-card {
+        min-height: 360px;
+
+        padding: 30px 55px;
+
+        border-radius: 18px;
+    }
+
+    .depoimentos .avatar {
+        width: 55px;
+        height: 55px;
+
+        font-size: 18px;
+    }
+
+    .depoimentos .nome {
+        font-size: 16px;
+    }
+
+    .depoimentos .texto {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .depoimentos .estrelas {
+        font-size: 18px;
+    }
+
+    .depoimentos .seta {
+        width: 40px;
+        height: 40px;
+
+        font-size: 27px;
+    }
+
+    .depoimentos .seta-esquerda {
+        left: 5px;
+    }
+
+    .depoimentos .seta-direita {
+        right: 5px;
+    }
+}
+
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+
+    .depoimentos {
+        padding: 60px 8px 50px;
+    }
+
+    .depoimentos .titulo {
+        font-size: 25px;
+    }
+
+    .depoimentos .carrossel {
+        min-height: 390px;
+    }
+
+    .depoimentos .depoimento-card {
+        min-height: 390px;
+        padding: 25px 45px;
+    }
+
+    .depoimentos .texto {
+        font-size: 13px;
+    }
+
+    .depoimentos .seta {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+
+    .depoimentos .seta-esquerda {
+        left: 2px;
+    }
+
+    .depoimentos .seta-direita {
+        right: 2px;
+    }
+}
+
+
+        /* RESPONSIVO DEPOIMENTOS*/
+        @media (max-width: 600px) {
+
+            body {
+                padding: 25px 0;
+            }
+
+            .titulo {
+                font-size: 24px;
+                padding: 0 15px;
+            }
+
+            .subtitulo {
+                font-size: 14px;
+                padding: 0 15px;
+            }
+
+            .carrossel {
+                width: 94%;
+            }
+
+            .depoimento-card {
+                padding: 25px 20px;
+                min-height: 350px;
+            }
+
+            .avatar {
+                width: 55px;
+                height: 55px;
+                font-size: 18px;
+            }
+
+            .nome {
+                font-size: 18px;
+            }
+
+            .data {
+                font-size: 13px;
+            }
+
+            .texto {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .estrelas {
+                font-size: 18px;
+            }
+
+            .seta {
+                width: 38px;
+                height: 38px;
+                font-size: 26px;
+            }
+
+            .seta-esquerda {
+                left: 8px;
+            }
+
+            .seta-direita {
+                right: 8px;
+            }
+        }
+
+
+        /* =========================================
+   CARROSSEL DO HERO
+========================================= */
+
+.hero-texto {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    z-index: 10;
+    min-height: 350px;
+}
+
+.hero-slide {
+    display: none;
+    animation: aparecerHero 0.5s ease;
+}
+
+.hero-slide.ativo {
+    display: block;
+}
+
+@keyframes aparecerHero {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================
+   SETAS
+========================================= */
+
+.hero-seta {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+    color: #48204a;
+
+    font-size: 40px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition: 0.3s;
+   
+}
+
+.hero-seta:hover {
+    background:#c9a0dc;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.hero-anterior {
+    left: -100px;
+    right: auto ;
+}
+
+.hero-proximo {
+    right: -100px ;
+    left: auto;
+}
+/* =========================================
+   INDICADORES
+========================================= */
+
+.hero-indicadores {
+    position: absolute;
+
+    bottom: -40px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 10px;
+
+    z-index: 20;
+}
+
+.hero-indicador {
+    width: 12px;
+    height: 12px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero-indicador.ativo {
+    width: 30px;
+    border-radius: 20px;
+    background: #c9a0dc;
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-texto {
+        width: 90%;
+        min-height: 400px;
+    }
+
+    .hero-seta {
+        width: 42px;
+        height: 42px;
+        font-size: 30px;
+    }
+
+    .hero-anterior {
+        left: 5px;
+    }
+
+    .hero-proximo {
+        right: 5px;
+    }
+
+    .hero-indicadores {
+        bottom: -30px;
+    }
+
+}
+
+/* =========================================
+   RESPONSIVIDADE - SOBRE NÓS
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sobre {
+        padding: 70px 20px 80px;
+    }
+
+    .sobre-conteudo {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+    }
+
+    /* TÍTULO */
+    .sobre .titulo-bloco {
+        margin-bottom: 35px;
+    }
+
+    .sobre .titulo-bloco h2 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    /* TEXTO */
+    .sobre-caixa {
+        width: 100%;
+        padding: 25px 20px;
+
+        box-shadow: 8px 8px 0 var(--azul-claro);
+    }
+
+    .sobre-caixa h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .sobre-caixa p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 14px;
+    }
+
+    /* IMAGEM */
+    .sobre-imagem {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sobre-imagem img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+/* =========================================
+   CELULARES MENORES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .sobre {
+        padding: 55px 15px 65px;
+    }
+
+    .sobre .titulo-bloco h2 {
+        font-size: 34px;
+    }
+
+    .sobre-conteudo {
+        gap: 30px;
+    }
+
+    .sobre-caixa {
+        padding: 20px 16px;
+        border-left-width: 5px;
+
+        box-shadow: 6px 6px 0 var(--azul-claro);
+    }
+
+    .sobre-caixa h3 {
+        font-size: 23px;
+    }
+
+    .sobre-caixa p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .sobre-imagem {
+        min-height: 240px;
+    }
+
+    .sobre-imagem img {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .hero-anterior {
+        left: 8px;
+        right: auto;
+    }
+
+    .hero-proximo {
+        right: 8px ;
+        left: auto;
+    }
+
+}
+
+/* =========================================================
+   CORREÇÃO DEFINITIVA DA QUEBRA LATERAL
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Imagens e vídeos nunca ultrapassam a tela */
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+/* =========================================================
+   DEPOIMENTOS
+========================================================= */
+
+.depoimentos {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.depoimento-wrapper {
+    width: min(620px, calc(100% - 30px));
+    max-width: 100%;
+}
+
+.depoimento-card {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* =========================================================
+   SETAS DOS DEPOIMENTOS
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .seta-esquerda {
+        left: 5px;
+    }
+
+    .seta-direita {
+        right: 5px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .depoimento-card {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .seta-esquerda {
+        left: 3px;
+    }
+
+    .seta-direita {
+        right: 3px;
+    }
+
+}
+
+
+/* =========================================================
+   LIVROS
+========================================================= */
+
+.projetos {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.livros-carousel {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.livros-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.livro-card {
+    max-width: 100%;
+}
+
+.livro-conteudo {
+    max-width: 100%;
+}
+
+.livro-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.contato {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.contato-container {
+    width: min(1100px, calc(100% - 30px));
+    max-width: 100%;
+}
+
+.container-formulario {
+    max-width: 100%;
+}
+
+.form-cta {
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-cta input,
+.form-cta textarea,
+.form-cta select {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.rodape-conteudo {
+    max-width: 100%;
+}
+
+.mapa-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .topnav {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logo {
+        max-width: 80px;
+        height: auto;
+    }
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-texto {
+        width: calc(100% - 30px);
+        max-width: 100%;
+    }
+
+    .hero h1,
+    .hero h2 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .sobre {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .sobre-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sobre-caixa,
+    .sobre-imagem {
+        max-width: 100%;
+    }
+
+    .faixa {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .comentarios {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .comentarios-container {
+        width: calc(100% - 30px);
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+        letter-spacing: 1px;
+    }
+
+    .hero p {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .titulo-depoimentos {
+        font-size: 32px;
+    }
+
+    .depoimento-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .livro-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+/* =========================================================
+   CORREÇÃO DE ESPAÇOS EXTRAS NO SITE
+========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Evita que elementos criem espaço fora da página */
+section,
+header,
+footer,
+nav,
+main {
+    max-width: 100%;
+}
+
+/* Imagens não podem aumentar a página */
+img {
+    max-width: 100%;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    section,
+    header,
+    footer,
+    nav,
+    main {
+        max-width: 100vw;
+    }
+
+}
