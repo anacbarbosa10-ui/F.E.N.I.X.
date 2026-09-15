@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>F.E.N.I.X</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.cdnfonts.com/css/modern-romance" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+<body>
+
+    <!-- ==================================================
+         MENU
+    ================================================== -->
+
+    <nav class="topnav">
+
+        <div class="logo-container">
+
+            <img
+                src="./arquivos/F.E.N.I.X (1).png"
+                alt="Logo F.E.N.I.X"
+                class="logo"
+            >
+
+        </div>
+
+        <button
+            class="menu-toggle"
+            id="btnMenu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <ul
+            class="menu-links"
+            id="menuLinks"
+        >
+
+            <li>
+                <a href="#sobre-nos" >
+                    Sobre nós 
+                </a>
+            </li>
+
+            <li>
+                <a href="#depoimentos">
+                    Depoimentos
+                </a>
+            </li>
+
+            <li>
+                <a href="#projetos">
+                    Livros
+                </a>
+            </li>
+
+            <li>
+                <a href="#contato">
+                    Cadastra-se
+                </a>
+            </li>
+
+            <li>
+                <a href="#comentarios">
+                    Comentários
+                </a>
+            </li>
+
+            <li>
+                <a href="#localizacao">
+                    Localização
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ==================================================
+         HERO / PÁGINA PRINCIPAL
+    ================================================== -->
+
+
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+
+    <header class="hero">
+
+      <div class="hero-texto">
+
+    <div class="hero-slide ativo">
+
+        <h1>RECOMEÇO</h1>
+
+        <h2>É POSSÍVEL</h2 >
+
+        <p>
+            Apoio, acolhimento e motivação
+            para superar desafios.
+        </p>
+
+        <a href="#projetos" class="hero-btn">
+            Conheça nosso trabalho
+        </a>
+
+    </div>
+
+
+    <div class="hero-slide">
+
+        <h1>VOCÊ</h1>
+
+        <h2>NÃO ESTÁ SOZINHO</h2>
+
+        <p>
+            Encontre apoio e acolhimento
+            durante sua jornada.
+        </p>
+
+        <a href="#sobre-nos" class="hero-btn">
+            Conheça a F.E.N.I.X
+        </a>
+
+    </div>
+
+
+    <div class="hero-slide">
+
+        <h1>NOVO</h1>
+
+        <h2>CAMINHO</h2>
+
+        <p>
+            Cada passo é importante.
+            Estamos aqui para apoiar você.
+        </p>
+
+        <a href="#contato" class="hero-btn">
+            cadastre-se
+        </a>
+
+    </div>
+
+
+    <!-- SETAS -->
+
+<!-- SETAS -->
+
+<button class="hero-seta hero-anterior" onclick="heroAnterior()">
+    ‹
+</button>
+
+<button class="hero-seta hero-proximo" onclick="heroProximo()">
+    ›
+</button>
+
+    <!-- BOLINHAS -->
+
+    <div class="hero-indicadores">
+
+        <button
+            class="hero-indicador ativo"
+            onclick="heroIrPara(0)">
+        </button>
+
+        <button
+            class="hero-indicador"
+            onclick="heroIrPara(1)">
+        </button>
+
+        <button
+            class="hero-indicador"
+            onclick="heroIrPara(2)">
+        </button>
+
+    </div>
+
+</div>
+
+
+        <div class="linha-decorativa linha-1"></div>
+        <div class="linha-decorativa linha-2"></div>
+
+        <div class="circulo-decorativo circulo-1"></div>
+        <div class="circulo-decorativo circulo-2"></div>
+
+    </header>
+
+    
+    <!-- ==================================================
+         SOBRE
+    ================================================== -->
+
+    <section
+        id="sobre-nos"
+        class="sobre"
+    >
+
+        <div class="titulo-bloco">
+
+            <h2>
+                QUEM SOMOS
+            </h2>
+
+        </div>
+
+
+        <div class="sobre-conteudo">
+
+
+            <!-- CAIXA DO TEXTO -->
+
+            <div class="sobre-caixa">
+
+                <h3>
+                    F.E.N.I.X
+                </h3>
+
+                <p>
+                    A F.E.N.I.X é uma empresa focada em ajudar
+                    pessoas com dependência de nicotina e álcool
+                    que enfrentam dificuldades, sempre priorizando
+                    o bem-estar e a saúde mental.
+                </p>
+
+                <p>
+                    Também contamos com o apoio dos familiares
+                    durante toda a jornada, pois acreditamos que
+                    o suporte emocional é fundamental nesse processo.
+                </p>
+
+                <p>
+                    O grupo não busca, necessariamente, acabar com
+                    o vício, mas sim reduzir o número de pessoas
+                    presas a esse problema.
+                </p>
+
+                <p>
+                    Sabemos que a superação depende de cada indivíduo,
+                    mas a F.E.N.I.X foi criada com o objetivo de apoiar,
+                    incentivar e mostrar que é possível superar desafios
+                    com acolhimento e motivação.
+                </p>
+
+                <p>
+                    Nosso site foi desenvolvido de forma institucional
+                    para o curso de Multimídia, pois entendemos que
+                    esse é um tema relevante e importante de ser discutido.
+                </p>
+
+            </div>
+
+
+            <!-- IMAGEM -->
+
+            <div class="sobre-imagem">
+
+                <img
+                    src="./arquivos/grupo.jpg"
+                    alt="Imagem da F.E.N.I.X"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================================================
+         NOVA PÁGINA BRANCA - DEPOIMENTOS
+    ================================================== -->
+
+    <section id="depoimentos" class="depoimentos">
+
+    <h2 class="titulo-depoimentos">
+        DEPOIMENTOS
+    </h2>
+
+    <div class="depoimento-wrapper">
+
+        <!-- DECORAÇÕES -->
+        <div class="decoracao decoracao-1"></div>
+        <div class="decoracao decoracao-2"></div>
+        <div class="decoracao decoracao-3"></div>
+
+
+        <!-- CARD -->
+        <div class="depoimento-card">
+
+            <!-- BOLINHAS -->
+            <span class="bolinha bolinha-1"></span>
+            <span class="bolinha bolinha-2"></span>
+
+
+            <!-- CONTEÚDO -->
+            <div class="depoimento-conteudo">
+
+                <h3 id="depoimento-nome">
+                    Rafael
+                </h3>
+
+                <div
+                    class="idade"
+                    id="depoimento-idade"
+                >
+                    39 anos
+                </div>
+
+                <p id="depoimento-texto">
+                    O álcool e o cigarro estavam presentes
+                    em muitos momentos da minha vida. Eu
+                    pensava que seria impossível mudar.
+                    A F.E.N.I.X me mostrou que cada pequena
+                    conquista importa.
+                </p>
+
+            </div>
+
+
+            <!-- SETA ESQUERDA -->
+            <button
+                class="depoimento-seta seta-esquerda"
+                type="button"
+                onclick="depoimentoAnterior()"
+                aria-label="Depoimento anterior"
+            >
+                ‹
+            </button>
+
+
+            <!-- SETA DIREITA -->
+            <button
+                class="depoimento-seta seta-direita"
+                type="button"
+                onclick="depoimentoProximo()"
+                aria-label="Próximo depoimento"
+            >
+                ›
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==================================================
+         FAIXA
+    ================================================== -->
+
+    <div class="faixa">
+
+        <div class="faixa-conteudo">
+
+            <span>✦</span>
+            <span>F.E.N.I.X</span>
+            <span>✦</span>
+            <span>APOIO</span>
+            <span>✦</span>
+            <span>ACOLHIMENTO</span>
+            <span>✦</span>
+            <span>MOTIVAÇÃO</span>
+            <span>✦</span>
+            <span>AJUDA</span>
+            <span>✦</span>
+            <span>SUPERAÇÃO</span>
+            <span>✦</span>
+            <span>AMPARO</span>
+            <span>✦</span>
+            <span>SUPORTE</span>
+            <span>✦</span>
+            <span>CUIDADO</span>
+            <span>✦</span>
+            <span>ZELO</span>
+            <span>✦</span>
+            <span>TRATAMENTO</span>
+            <span>✦</span>
+            <span>F.E.N.I.X</span>
+            <span>✦</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         PROJETOS / LIVROS
+    ================================================== -->
+
+
+<section id="projetos" class="projetos">
+
+    <div class="titulo-bloco titulo-branco">
+        <h2>Livros</h2>
+    </div>
+
+    <p class="subtitulo-projetos">
+        Confira alguns materiais que podem ajudar na compreensão
+        e na prevenção da dependência.
+    </p>
+
+
+    <!-- =========================================
+         CARROSSEL DE LIVROS
+    ========================================== -->
+
+    <div class="livros-carousel">
+
+
+        <!-- SETA ANTERIOR -->
+        <button
+            class="livro-prev"
+            type="button"
+            aria-label="Livro anterior"
+        >
+            ❮
+        </button>
+
+
+        <!-- CONTAINER DOS LIVROS -->
+        <div class="livros-container">
+
+
+            <!-- LIVRO 1 -->
+            <article class="livro-card">
+
+                <h3>
+                    Vício: o reino dos fantasmas famintos
+                </h3>
+
+                <div class="livro-conteudo">
+
+                    <img
+                        src="./livros/livro 1.jpg"
+                        alt="Capa do livro Vício: o reino dos fantasmas famintos"
+                    >
+
+                    <div class="livro-informacoes">
+
+                        <p>
+                            "Vício: O Reino dos Fantasmas Famintos",
+                            do médico Gabor Maté, apresenta uma visão
+                            sobre a dependência química e comportamental.
+                            A obra relaciona o vício a dores emocionais
+                            profundas e destaca a importância da compaixão,
+                            do acolhimento e da compreensão durante o processo
+                            de recuperação.
+                        </p>
+
+                        <a
+                            class="livro-leia"
+                            href="./livros/vicio-o-reino-dos-fantasmas-famintos.pdf"
+                            target="_blank"
+                        >
+                            Leia aqui
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- LIVRO 2 -->
+            <article class="livro-card">
+
+                <h3>
+                    Deixando de fumar sem mistérios
+                </h3>
+
+                <div class="livro-conteudo">
+
+                    <img
+                        src="./livros/image.png"
+                        alt="Capa do livro Deixando de fumar sem mistérios"
+                    >
+
+                    <div class="livro-informacoes">
+
+                        <p>
+                            O livro aborda a dependência da nicotina
+                            e apresenta estratégias para ajudar o leitor
+                            a abandonar o cigarro. Explica os gatilhos que
+                            levam ao consumo, as dificuldades durante a
+                            abstinência e a importância de mudar hábitos,
+                            incentivando uma vida sem tabaco por meio da
+                            informação e da conscientização.
+                        </p>
+
+                        <a
+                            class="livro-leia"
+                            href="./livros/deixando-de-fumar-sem-misterios-instituto-nacional-de-cancer (1).pdf"
+                            target="_blank"
+                        >
+                            Leia aqui
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- LIVRO 3 -->
+            <article class="livro-card">
+
+                <h3>
+                    Guia para combater os vícios
+                </h3>
+
+                <div class="livro-conteudo">
+
+                    <img
+                        src="./livros/livro.2.png"
+                        alt="Capa do livro Guia para combater os vícios"
+                    >
+
+                    <div class="livro-informacoes">
+
+                        <p>
+                            Apresenta uma abordagem para combater diferentes
+                            tipos de vícios, destacando a importância de
+                            compreender o ciclo da dependência, identificar
+                            gatilhos e evitar recaídas. O material recomenda
+                            estratégias como terapia, apoio familiar e
+                            grupos de apoio, além da criação de uma rotina
+                            saudável.
+                        </p>
+
+                        <a
+                            class="livro-leia"
+                            href="./livros/GUIA-PARA-COMBATER-OS-VICIOS.v1 (1).pdf"
+                            target="_blank"
+                        >
+                            Leia aqui
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- LIVRO 4 -->
+            <article class="livro-card">
+
+                <h3>
+                    Guia Dependência Química
+                </h3>
+
+                <div class="livro-conteudo">
+
+                    <img
+                        src="./livros/livro4.png"
+                        alt="Guia Dependência Química"
+                    >
+
+                    <div class="livro-informacoes">
+
+                        <p>
+                            A dependência química é um problema que pode afetar
+                            a pessoa, sua família e suas relações sociais.
+                            O guia explica o que é a dependência e os fatores
+                            que podem contribuir para o seu surgimento.
+                            Entre esses fatores estão aspectos biológicos,
+                            psicológicos, sociais e culturais.
+                            Também apresenta informações sobre diferentes
+                            tipos de substâncias e seus riscos.
+                            A obra mostra que a dependência pode ser tratada
+                            com acompanhamento adequado.
+                            O apoio da família e de profissionais é fundamental
+                            durante esse processo.
+                        </p>
+
+                        <a
+                            class="livro-leia"
+                            href="./livros/ebook-guia-dependencia-quimica.pdf"
+                            target="_blank"
+                        >
+                            Leia aqui
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- SETA PRÓXIMA -->
+        <button
+            class="livro-next"
+            type="button"
+            aria-label="Próximo livro"
+        >
+            ❯
+        </button>
+
+
+    </div>
+
+
+    <!-- BOLINHAS -->
+    <div
+        class="livros-dots"
+        id="livrosDots"
+    ></div>
+
+
+</section>
+
+
+    <!-- ==================================================
+         CONTATO
+    ================================================== -->
+
+    <section
+        id="contato"
+        class="contato"
+    >
+
+        <div class="titulo-bloco">
+
+            <h2>
+              cadastre-se
+            </h2>
+
+        </div>
+
+
+        <div class="contato-container">
+
+
+            <div class="contato-texto">
+
+                <h3>
+                    Precisa de apoio?
+                </h3>
+
+                <p>
+                    Preencha os dados ao lado
+                    para detalhar sua necessidade.
+                </p>
+
+                <strong>
+                    Você não precisa enfrentar
+                    tudo sozinho.
+                </strong>
+
+            </div>
+
+
+            <div class="container-formulario">
+
+                <form
+                    id="formCadastro"
+                    class="form-cta"
+                >
+
+                    <div class="grupo-campo">
+
+                        <label for="nome">
+                            Nome
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            required
+                            placeholder="Seu nome"
+                        >
+
+                    </div>
+
+
+                    <div class="grupo-campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            required
+                            placeholder="Seu e-mail"
+                        >
+
+                    </div>
+
+
+                    <div class="grupo-campo">
+
+                        <label for="data">
+                            Data de nascimento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="grupo-campo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            required
+                            placeholder="Sua senha"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-enviar"
+                    >
+                        CADASTRAR
+                    </button>
+
+                </form>
+
+
+                <div
+                    id="mensagem-sucesso"
+                    class="feedback-sucesso"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         COMENTÁRIOS
+    ================================================== -->
+
+    <section
+        id="comentarios"
+        class="comentarios"
+    >
+
+        <div class="titulo-bloco">
+
+            <h2>
+                COMENTÁRIOS
+            </h2>
+
+        </div>
+
+
+        <div class="comentarios-container">
+
+            <div class="comentario-topo">
+               font- O QUE NOSSOS CLIENTES DIZEM 
+            </div>
+
+
+            <div
+                id="comentario"
+                class="comentario"
+            >
+                Carregando comentário...
+            </div>
+
+            <div class="botoes-comentario">
+    <button
+        type="button"
+        onclick="comentarioFenixAnterior()"
+        aria-label="Comentário anterior"
+    >
+        ←
+    </button>
+
+    <button
+        type="button"
+        onclick="comentarioFenixProximo()"
+        aria-label="Próximo comentário"
+    >
+        →
+    </button>
+</div>
+
+<textarea
+    id="novoComentario"
+    placeholder="Escreva seu comentário..." style="font-size: 16px;"
+></textarea>
+
+<button
+    type="button"
+    class="btn-enviar-comentario"
+    onclick="adicionarComentarioFenix()"
+>
+    ENVIAR COMENTÁRIO
+</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer
+        class="rodape"
+        id="localizacao"
+    >
+
+        <div class="footer-marca">
+            <h2>
+                RECOMEÇAR
+            </h2>
+
+            <p>
+                É POSSÍVEL.
+            </p>
+
+        </div>
+
+
+        <div class="rodape-conteudo">
+
+
+            <!-- CONTATO -->
+
+            <div class="rodape-contato">
+
+                <span>
+                    CONTATO
+                </span>
+
+                <h3>
+                    Fale conosco
+                </h3>
+
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+  <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
+</svg> 
+<a href="https://fenixajudasocial.com" target="_blank">
+  Fenixajudasocial.com
+</a>
+                </p>
+
+                
+                <p>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg>
+                 <a href="https://www.instagram.com/_fenixajudasocial/" target="_blank">
+  @_fenixajudasocial
+</a>
+                </p>
+
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+</svg>
+<a href="https://wa.me/5517999999999" target="_blank">
+  (17) 99999-9999
+</a>
+                </p>
+
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+</svg> 
+
+<a href="https://www.google.com/maps/search/?api=1&query=R.+Ipiranga%2C+1025%2C+Parque+Res.+Flamingo%2C+Catanduva+-+SP" target="_blank">
+ R. Ipiranga, 1025 -
+                    Parque Res. Flamingo,
+                    Catanduva - SP
+</a>
+
+
+</p>
+            </div>
+
+
+            <!-- MAPA -->
+
+            <div class="rodape-localizacao">
+
+                <span>
+                    LOCALIZAÇÃO
+                </span>
+
+                <h3>
+                    Onde estamos
+                </h3>
+
+                <div class="mapa-container">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=R.%20Ipiranga,%201025,%20Catanduva%20-%20SP&output=embed"
+                        loading="lazy"
+                        allowfullscreen
+                    ></iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="rodape-info">
+
+            <strong>
+                F.E.N.I.X
+            </strong>
+
+            <p>
+                © 2026 FENIX - Todos os direitos reservados.
+            </p>
+
+            <p>
+                Desenvolvido para fins educacionais -
+                Engenharia de Interface.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+     <button id="btnVoltarTopo" class="btn-voltar-topo" aria-label="Voltar ao topo"></button>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
