@@ -1,0 +1,830 @@
+// =========================================
+// 1. MENU MOBILE
+// =========================================
+
+const btnMenu = document.getElementById("btnMenu");
+const menuLinks = document.getElementById("menuLinks");
+
+if (btnMenu && menuLinks) {
+
+    btnMenu.addEventListener("click", () => {
+
+        menuLinks.classList.toggle("ativo");
+
+        const expandido =
+            btnMenu.getAttribute("aria-expanded") === "true";
+
+        btnMenu.setAttribute(
+            "aria-expanded",
+            String(!expandido)
+        );
+
+    });
+
+    document
+        .querySelectorAll(".menu-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                menuLinks.classList.remove("ativo");
+
+                btnMenu.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+        });
+
+}
+
+const depoimentos = [
+
+    {
+        nome: "Rafael",
+        idade: "39 anos",
+        texto: "O álcool e o cigarro estavam presentes em muitos momentos da minha vida. Eu pensava que seria impossível mudar. A F.E.N.I.X me mostrou que cada pequena conquista importa."
+    },
+
+    {
+        nome: "Lucas",
+        idade: "34 anos",
+        texto: "Eu tinha vergonha de admitir que precisava de ajuda. Quando finalmente dei esse passo, percebi que procurar apoio foi uma das decisões mais importantes da minha vida. Ainda estou caminhando, mas hoje tenho esperança de um futuro diferente."
+    },
+
+    {
+        nome: "André",
+        idade: "38 anos",
+        texto: "A recuperação não aconteceu de um dia para o outro, mas cada pequena conquista fez diferença. Aprendi a cuidar de mim, valorizar minha família e buscar ajuda quando preciso. Hoje vejo que sempre existe a possibilidade de recomeçar."
+    },
+
+    {
+        nome: "Mariana",
+        idade: "",
+        texto: "Ver alguém que amamos enfrentando a dependência química é muito difícil. Buscar ajuda foi o primeiro passo para nossa família. Hoje aprendemos que a recuperação é um processo e que ninguém precisa enfrentar essa caminhada sozinho."
+    }
+
+];
+
+
+let depoimentoAtual = 0;
+
+function mostrarDepoimento() {
+
+    document.getElementById("depoimento-nome").textContent =
+        depoimentos[depoimentoAtual].nome;
+
+    document.getElementById("depoimento-idade").textContent =
+        depoimentos[depoimentoAtual].idade;
+
+    document.getElementById("depoimento-texto").textContent =
+        depoimentos[depoimentoAtual].texto;
+}
+
+
+function depoimentoProximo() {
+
+    depoimentoAtual++;
+
+    if (depoimentoAtual >= depoimentos.length) {
+        depoimentoAtual = 0;
+    }
+
+    mostrarDepoimento();
+}
+
+
+function depoimentoAnterior() {
+
+    depoimentoAtual--;
+
+    if (depoimentoAtual < 0) {
+        depoimentoAtual = depoimentos.length - 1;
+    }
+
+    mostrarDepoimento();
+}
+
+
+
+// =========================================
+// 3. FORMULÁRIO
+// =========================================
+
+const formCadastro =
+    document.getElementById("formCadastro");
+
+const mensagemSucesso =
+    document.getElementById("mensagem-sucesso");
+
+
+if (formCadastro) {
+
+    formCadastro.addEventListener(
+        "submit",
+        e => {
+
+            e.preventDefault();
+
+
+            const nome =
+                document.getElementById("nome")?.value;
+
+            const email =
+                document.getElementById("email")?.value;
+
+            const data =
+                document.getElementById("data")?.value;
+
+            const senha =
+                document.getElementById("senha")?.value;
+
+
+            if (
+                !nome ||
+                !email ||
+                !data ||
+                !senha
+            ) {
+
+                return;
+
+            }
+
+
+            if (mensagemSucesso) {
+
+                mensagemSucesso.innerHTML =
+                    `Perfeito, ${nome}! Seus dados foram recebidos com sucesso.`;
+
+                mensagemSucesso.style.display =
+                    "block";
+
+            }
+
+
+            formCadastro.reset();
+
+        }
+    );
+
+}
+
+
+// =========================================
+// 4. GEOLOCALIZAÇÃO
+// =========================================
+
+const btnLocalizacao =
+    document.getElementById("btnLocalizacao");
+
+const resultadoGps =
+    document.getElementById("resultado-gps");
+
+
+if (
+    btnLocalizacao &&
+    resultadoGps
+) {
+
+    btnLocalizacao.addEventListener(
+        "click",
+        () => {
+
+            resultadoGps.innerText =
+                "Buscando sua localização...";
+
+
+            if ("geolocation" in navigator) {
+
+                navigator.geolocation.getCurrentPosition(
+
+                    posicao => {
+
+                        const lat =
+                            posicao.coords.latitude
+                                .toFixed(4);
+
+                        const lon =
+                            posicao.coords.longitude
+                                .toFixed(4);
+
+
+                        resultadoGps.innerHTML = `
+                            <strong>Sua posição:</strong><br>
+                            Latitude: ${lat}<br>
+                            Longitude: ${lon}
+                        `;
+
+                    },
+
+                    () => {
+
+                        resultadoGps.innerText =
+                            "Não foi possível obter sua localização. Verifique a permissão do navegador.";
+
+                    }
+
+                );
+
+            } else {
+
+                resultadoGps.innerText =
+                    "Seu navegador não suporta geolocalização.";
+
+            }
+
+        }
+    );
+
+}
+
+
+// =========================================
+// 5. BOTÃO VOLTAR AO TOPO
+// =========================================
+
+const btnVoltarTopo =
+    document.getElementById("btnVoltarTopo");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (!btnVoltarTopo) {
+            return;
+        }
+
+
+        if (
+            document.body.scrollTop > 200 ||
+            document.documentElement.scrollTop > 200
+        ) {
+
+            btnVoltarTopo.style.display =
+                "block";
+
+        } else {
+
+            btnVoltarTopo.style.display =
+                "none";
+
+        }
+
+    }
+);
+
+
+if (btnVoltarTopo) {
+
+    btnVoltarTopo.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+    );
+
+}
+
+
+
+
+
+// =========================================
+// 6. CARROSSEL DE LIVROS
+// =========================================
+
+const livrosCards =
+    document.querySelectorAll(".livro-card");
+
+const livrosNext =
+    document.querySelector(".livro-next");
+
+const livrosPrev =
+    document.querySelector(".livro-prev");
+
+const livrosDots =
+    document.getElementById("livrosDots");
+
+
+let livroAtual = 0;
+let livrosTimer = null;
+
+const LIVROS_INTERVALO = 4000;
+
+
+// =========================================
+// CRIAR BOLINHAS
+// =========================================
+
+if (
+    livrosCards.length &&
+    livrosDots
+) {
+
+    livrosCards.forEach((_, indice) => {
+
+        const dot =
+            document.createElement("button");
+
+        dot.type = "button";
+
+        dot.className = "livro-dot";
+
+        dot.setAttribute(
+            "aria-label",
+            `Ir para o livro ${indice + 1}`
+        );
+
+
+        dot.addEventListener(
+            "click",
+            () => {
+
+                livroAtual = indice;
+
+                atualizarLivros();
+
+                reiniciarLivros();
+
+            }
+        );
+
+
+        livrosDots.appendChild(dot);
+
+    });
+
+}
+
+
+// =========================================
+// ATUALIZAR LIVROS
+// =========================================
+
+function atualizarLivros() {
+
+    if (!livrosCards.length) {
+        return;
+    }
+
+
+    const livroBolinhas =
+        document.querySelectorAll(".livro-dot");
+
+
+    livrosCards.forEach(card => {
+
+        card.classList.remove(
+            "livro-active",
+            "livro-left",
+            "livro-right"
+        );
+
+    });
+
+
+    livroBolinhas.forEach(dot => {
+
+        dot.classList.remove("active");
+
+    });
+
+
+    const esquerda =
+        (
+            livroAtual -
+            1 +
+            livrosCards.length
+        ) %
+        livrosCards.length;
+
+
+    const direita =
+        (
+            livroAtual +
+            1
+        ) %
+        livrosCards.length;
+
+
+    livrosCards[livroAtual]
+        .classList.add("livro-active");
+
+
+    if (livrosCards.length > 1) {
+
+        livrosCards[esquerda]
+            .classList.add("livro-left");
+
+
+        livrosCards[direita]
+            .classList.add("livro-right");
+
+    }
+
+
+    if (livroBolinhas[livroAtual]) {
+
+        livroBolinhas[livroAtual]
+            .classList.add("active");
+
+    }
+
+}
+
+
+// =========================================
+// PRÓXIMO LIVRO
+// =========================================
+
+function proximoLivro() {
+
+    if (livrosCards.length <= 1) {
+        return;
+    }
+
+
+    livroAtual =
+        (livroAtual + 1)
+        % livrosCards.length;
+
+
+    atualizarLivros();
+
+}
+
+
+// =========================================
+// LIVRO ANTERIOR
+// =========================================
+
+function livroAnterior() {
+
+    if (livrosCards.length <= 1) {
+        return;
+    }
+
+
+    livroAtual =
+        (
+            livroAtual -
+            1 +
+            livrosCards.length
+        ) % livrosCards.length;
+
+
+    atualizarLivros();
+
+}
+
+
+// =========================================
+// INICIAR LIVROS
+// =========================================
+
+function iniciarLivros() {
+
+    clearInterval(livrosTimer);
+
+
+    if (livrosCards.length > 1) {
+
+        livrosTimer =
+            setInterval(
+                proximoLivro,
+                LIVROS_INTERVALO
+            );
+
+    }
+
+}
+
+
+function reiniciarLivros() {
+
+    iniciarLivros();
+
+}
+
+
+// =========================================
+// BOTÕES LIVROS
+// =========================================
+
+if (livrosNext) {
+
+    livrosNext.addEventListener(
+        "click",
+        () => {
+
+            proximoLivro();
+
+            reiniciarLivros();
+
+        }
+    );
+
+}
+
+
+if (livrosPrev) {
+
+    livrosPrev.addEventListener(
+        "click",
+        () => {
+
+            livroAnterior();
+
+            reiniciarLivros();
+
+        }
+    );
+
+}
+
+
+// =========================================
+// TOUCH LIVROS
+// =========================================
+
+const livrosCarousel =
+    document.querySelector(".livros-carousel");
+
+let livroTouchStart = 0;
+
+
+if (livrosCarousel) {
+
+    livrosCarousel.addEventListener(
+        "touchstart",
+        e => {
+
+            livroTouchStart =
+                e.changedTouches[0].screenX;
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    livrosCarousel.addEventListener(
+        "touchend",
+        e => {
+
+            const livroTouchEnd =
+                e.changedTouches[0].screenX;
+
+
+            const distancia =
+                livroTouchEnd -
+                livroTouchStart;
+
+
+            if (Math.abs(distancia) < 50) {
+                return;
+            }
+
+
+            if (distancia < 0) {
+
+                proximoLivro();
+
+            } else {
+
+                livroAnterior();
+
+            }
+
+
+            reiniciarLivros();
+
+        },
+        {
+            passive: true
+        }
+    );
+
+}
+
+
+// =========================================
+// INICIAR CARROSSEL DOS LIVROS
+// =========================================
+
+if (livrosCards.length) {
+
+    atualizarLivros();
+
+    iniciarLivros();
+
+}
+
+// =========================================
+// CARROSSEL DO HERO
+// =========================================
+
+let heroSlideAtual = 0;
+
+const heroSlides =
+    document.querySelectorAll(".hero-slide");
+
+const heroIndicadores =
+    document.querySelectorAll(".hero-indicador");
+
+
+function atualizarHero() {
+
+    heroSlides.forEach((slide, index) => {
+
+        slide.classList.toggle(
+            "ativo",
+            index === heroSlideAtual
+        );
+
+    });
+
+
+    heroIndicadores.forEach((indicador, index) => {
+
+        indicador.classList.toggle(
+            "ativo",
+            index === heroSlideAtual
+        );
+
+    });
+
+}
+
+
+function heroProximo() {
+
+    heroSlideAtual++;
+
+    if (heroSlideAtual >= heroSlides.length) {
+        heroSlideAtual = 0;
+    }
+
+    atualizarHero();
+
+}
+
+
+function heroAnterior() {
+
+    heroSlideAtual--;
+
+    if (heroSlideAtual < 0) {
+        heroSlideAtual = heroSlides.length - 1;
+    }
+
+    atualizarHero();
+
+}
+
+
+function heroIrPara(numero) {
+
+    heroSlideAtual = numero;
+
+    atualizarHero();
+
+}
+
+// =========================================================
+// COMENTÁRIOS - F.E.N.I.X
+// =========================================================
+
+const comentariosFenix = [
+    "Adorei a atenção deles, me senti acolhida.",
+    "Amei o trabalho deles."
+];
+
+let indiceComentarioFenix = 0;
+
+
+// =========================================================
+// MOSTRAR COMENTÁRIO
+// =========================================================
+
+function mostrarComentarioFenix() {
+
+    const comentario =
+        document.getElementById("comentario");
+
+    if (!comentario) {
+        return;
+    }
+
+    if (comentariosFenix.length === 0) {
+        comentario.textContent =
+            "Ainda não há comentários.";
+        return;
+    }
+
+    comentario.textContent =
+        comentariosFenix[indiceComentarioFenix];
+}
+
+
+// =========================================================
+// PRÓXIMO
+// =========================================================
+
+function comentarioFenixProximo() {
+
+    if (comentariosFenix.length === 0) {
+        return;
+    }
+
+    indiceComentarioFenix++;
+
+    if (
+        indiceComentarioFenix >=
+        comentariosFenix.length
+    ) {
+        indiceComentarioFenix = 0;
+    }
+
+    mostrarComentarioFenix();
+}
+
+
+// =========================================================
+// ANTERIOR
+// =========================================================
+
+function comentarioFenixAnterior() {
+
+    if (comentariosFenix.length === 0) {
+        return;
+    }
+
+    indiceComentarioFenix--;
+
+    if (indiceComentarioFenix < 0) {
+        indiceComentarioFenix =
+            comentariosFenix.length - 1;
+    }
+
+    mostrarComentarioFenix();
+}
+
+
+// =========================================================
+// ADICIONAR COMENTÁRIO
+// =========================================================
+
+function adicionarComentarioFenix() {
+
+    const campo =
+        document.getElementById("novoComentario");
+
+    if (!campo) {
+        return;
+    }
+
+    const texto = campo.value.trim();
+
+    if (texto === "") {
+        alert("Digite um comentário.");
+        return;
+    }
+
+    // Adiciona o novo comentário
+    comentariosFenix.push(texto);
+
+    // Vai direto para o comentário recém-adicionado
+    indiceComentarioFenix =
+        comentariosFenix.length - 1;
+
+    // Mostra o novo comentário
+    mostrarComentarioFenix();
+
+    // Limpa a caixa
+    campo.value = "";
+
+    alert("Comentário adicionado com sucesso!");
+}
+
+
+
+// =========================================================
+// INICIAR
+// =========================================================
+
+mostrarComentarioFenix();
+
